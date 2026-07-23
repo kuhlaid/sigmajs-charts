@@ -1,65 +1,113 @@
-import Image from "next/image";
+/**
+ * This example demonstrates how to adjust Sigma's settings for better control
+ * over the camera's capabilities.
+ */
+'use client'; // Required at the very top of the file
+
+import { useEffect } from 'react';
+import Graph from "graphology";
+import { parse } from "graphology-gexf";
+import Sigma from "sigma";
+import Settings from "sigma";
+
+async function initGraph() {
+  // Load external GEXF file:
+  const res = await fetch("https://www.sigmajs.org/storybook/arctic.gexf");
+  const gexf = await res.text();
+
+  function readForm(): Partial<Settings> {
+    const data = new FormData(form);
+    const res: Partial<Settings> = {};
+
+    // Interactions:
+    res.enableCameraZooming = !!data.get("enable-zooming");
+    res.enableCameraPanning = !!data.get("enable-panning");
+    res.enableCameraRotation = !!data.get("enable-rotation");
+
+    // Zoom boundaries:
+    const minRatio = data.get("min-ratio");
+    res.minCameraRatio = minRatio ? +minRatio : null;
+    const maxRatio = data.get("max-ratio");
+    res.maxCameraRatio = maxRatio ? +maxRatio : null;
+
+    // Pan boundaries:
+    const isBound = data.get("is-camera-bound");
+    const tolerance = data.get("tolerance");
+    res.cameraPanBoundaries = isBound ? { tolerance: +(tolerance || 0) } : null;
+
+    return res;
+  }
+  
+  useEffect(() => {
+  
+  const graph = parse(Graph, gexf);
+
+  // Retrieve some useful DOM elements:
+
+  // Instantiate sigma:
+  const renderer = new Sigma(graph, document.getElementById("sigma-container") as HTMLElement);
+
+  // Handle form submits:
+  const form = document.getElementById("controls") as HTMLFormElement;
+  const submitButton = document.querySelector('form button[type="submit"]') as HTMLButtonElement;
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    renderer.setSettings(readForm());
+    submitButton.disabled = true;
+  });
+  form.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("change", () => {
+      submitButton.disabled = false;
+    });
+  });
+
+  // Initialize settings:
+  renderer.setSettings(readForm());
+
+  // Handle disabling some inputs contextually:
+  const enableZoomingInput = document.getElementById("enable-zooming") as HTMLInputElement;
+  const minRatioInput = document.getElementById("min-ratio") as HTMLInputElement;
+  const maxRatioInput = document.getElementById("max-ratio") as HTMLInputElement;
+  enableZoomingInput.addEventListener("change", () => {
+    const disabled = !enableZoomingInput.checked;
+    minRatioInput.disabled = disabled;
+    maxRatioInput.disabled = disabled;
+  });
+
+  const enablePanningInput = document.getElementById("enable-panning") as HTMLInputElement;
+  const isCameraBoundInput = document.getElementById("is-camera-bound") as HTMLInputElement;
+  const toleranceInput = document.getElementById("tolerance") as HTMLInputElement;
+  isCameraBoundInput.addEventListener("change", () => {
+    toleranceInput.disabled = !isCameraBoundInput.checked;
+  });
+  enablePanningInput.addEventListener("change", () => {
+    const disabled = !enablePanningInput.checked;
+    isCameraBoundInput.disabled = disabled;
+    toleranceInput.disabled = disabled;
+  });
+
+  // Handle reset camera position
+  const resetButton = document.querySelector('button[type="button"]') as HTMLButtonElement;
+  resetButton.addEventListener("click", () => {
+    renderer.getCamera().animatedReset({ duration: 600 });
+  });
+  }, []);
+  return renderer;
+}
+
+// export default () => {
+  
+// };
+
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  let renderer: Sigma;
+  initGraph().then((r) => {
+    renderer = r;
+  });
+
+  return () => {
+    renderer?.kill();
+  };
 }
