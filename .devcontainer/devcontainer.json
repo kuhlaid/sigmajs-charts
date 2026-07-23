@@ -1,0 +1,10 @@
+{
+  "name": "Next.js App",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Next.js Dev Server",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
