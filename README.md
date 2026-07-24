@@ -20,4 +20,10 @@ The goal of this code is to provide NodeJs graph charting using SigmaJs charts u
 - run `yarn dev` (to start the local server)
 
 - next you will need to run `gh codespace ports visibility 6006:public -c $CODESPACE_NAME` and allow the browser to redirect to the codespace
-- To run Storybook, run `yarn storybook`
+
+
+## Setting up Vercel
+
+- Create a new project in Vercel and point to the GitHub repository
+- Set the framework to Vite
+- Set the start directory to `code/vite-project` (or the root directory of your Vite project)
