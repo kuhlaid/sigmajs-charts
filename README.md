@@ -29,7 +29,7 @@ Here we try to use the `express-generator-typescript` package to create a TypeSc
 - run `yarn dlx express-generator-typescript sigma-graph-esm`
 - run `cd sigma-graph-esm`
 - run `yarn add sigma graphology ejs` (you should be in the `sigma-graph-esm` app directory before running this command so the packages do not get committed to the code repository); this will also update yarn; the `ejs` package is used to serve .ejs template files
-- run `yarn dev` (make sure you are within the `sigma-graph-esm` directory when running this script)
+- run `yarn dev:basic` (make sure you are within the `sigma-graph-esm` directory when running this script)
 
 ## Getting setup
 

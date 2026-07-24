@@ -66,7 +66,7 @@ app.get('/users', (_: Request, res: Response) => {
   return res.sendFile('users.html', { root: viewsDir });
 });
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');  // we need this so we can server .ejs template files
 /******************************************************************************
                                 Export default
 ******************************************************************************/
