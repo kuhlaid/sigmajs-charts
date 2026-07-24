@@ -15,8 +15,8 @@ The goal of this code is to provide NodeJs graph charting using SigmaJs charts u
 
 ## Adding extra packages
 
-- run `yarn add sigma graphology`
-- run `cd code/vite-project`
+- run `cd code/vite-project` (you must be in the Vite project directory to start the local server)
+- run `yarn add sigma graphology` (you should be in the `code/vite-project` directory before running this command so the packages do not get committed to the code repository)
 - run `yarn dev` (to start the local server)
 
 - next you will need to run `gh codespace ports visibility 6006:public -c $CODESPACE_NAME` and allow the browser to redirect to the codespace
