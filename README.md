@@ -1,5 +1,6 @@
 # sigmajs-charts
-The goal of this code is to provide NodeJs graph charting using SigmaJs charts using external data.
+
+The goal of this code is to provide NodeJs graph charting using SigmaJs charts using external data. The initial thought was to use NextJs but we do not need the full stack capabilities of NextJs so we are trying Vite.
 
 ## Getting setup
 
