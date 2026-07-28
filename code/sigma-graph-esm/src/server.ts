@@ -47,7 +47,7 @@ app.use((err: Error, _: Request, res: Response, next: NextFunction) => {
 });
 
 // **** FrontEnd Content **** //
-
+const __dirname = import.meta.dirname;
 // Set views directory (html)
 const viewsDir = path.join(__dirname, 'views');
 app.set('views', viewsDir);

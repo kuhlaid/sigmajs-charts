@@ -18,7 +18,7 @@
     "type-check": "tsx -b --noEmit"
   },
   "engines": {
-    "node": ">=21.0.0",
+    "node": ">=21.2.0",
     "npm": ">=10.0.0"
   },
   "_moduleAliases": {
