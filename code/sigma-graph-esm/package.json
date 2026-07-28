@@ -34,7 +34,6 @@
     "graphology-types": "^0.24.8",
     "helmet": "^8.3.0",
     "jet-env": "^1.1.6",
-    "jet-logger": "^2.2.3",
     "jet-paths": "^3.1.1",
     "jet-validators": "^2.3.1",
     "jsonfile": "^6.2.1",
