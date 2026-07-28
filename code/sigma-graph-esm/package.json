@@ -1,6 +1,7 @@
 {
   "name": "sigma-graph-esm",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "build": "shx rm -rf dist &&  tsc --project tsconfig.prod.json && npm run build:copy-static && npm run build:make-db",
     "build:copy-static": "shx mkdir -p dist/public dist/views && shx cp -r src/public/* dist/public && shx cp -r src/views/* dist/views",
