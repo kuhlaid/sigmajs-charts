@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "shx rm -rf dist &&  tsc --project tsconfig.prod.json && yarn run build:copy-static && yarn run build:make-db",
+    "build": "shx rm -rf dist && typescript --project tsconfig.prod.json && yarn run build:copy-static && yarn run build:make-db",
     "build:copy-static": "shx mkdir -p dist/public dist/views && shx cp -r src/public/* dist/public && shx cp -r src/views/* dist/views",
     "build:make-db": "shx mkdir -p dist/repos/common && shx touch dist/repos/common/database.json && echo \"{}\" > dist/repos/common/database.json",
     "clean-install": "rm -rf ./node_modules && rm -r package-lock.json && yarn i",
@@ -15,7 +15,7 @@
     "start": "cross-env DOTENV_CONFIG_PATH=./config/.env.production node -r dotenv/config -r module-alias/register ./dist/main.js",
     "sync": "delay 1s && browser-sync start --config bs-config.js",
     "test": "cross-env NODE_ENV=test vitest",
-    "type-check": "tsc -b --noEmit"
+    "type-check": "typescript -b --noEmit"
   },
   "engines": {
     "node": ">=21.0.0",
@@ -43,7 +43,6 @@
     "morgan": "^1.11.0",
     "shx": "^0.4.0",
     "sigma": "^3.0.3",
-    "tsc": "^2.0.4",
     "tspo": "^1.0.7",
     "vite": "^8.1.5",
     "vitest": "^4.1.10"
