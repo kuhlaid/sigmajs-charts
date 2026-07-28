@@ -18,12 +18,14 @@
     "type-check": "tsc -b --noEmit"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=21.0.0",
+    "npm": ">=10.0.0"
   },
   "_moduleAliases": {
     "@src": "dist"
   },
   "dependencies": {
+    "@emnapi/core": "^1.11.2",
     "cookie-parser": "^1.4.7",
     "cross-env": "^10.1.0",
     "dayjs": "^1.11.21",
