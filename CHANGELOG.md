@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [ ] testing posting data to an endpoint
 - [x] POST requests to the `app.github.dev` domain are likely blocked so requests will need to be tested on the build URL (e.g. vercel.com)
-- [ ] Make sure to perform a `yarn build` before pushing the code to ensure the build succeeds 
+- [x] Make sure to perform a `yarn build` before pushing the code to ensure the build succeeds (although some errors do not appear locally)
+- [x] needed to make a few updates to the configurations to help prevent errors and warnings
+- [x] setting `"type": "module"` in the package.json file to force the build to use ESM instead of commonJs
 
 ## [0.0.2] - 2026-07-24
 
