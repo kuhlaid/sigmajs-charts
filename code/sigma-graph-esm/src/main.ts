@@ -1,4 +1,4 @@
-import logger from 'jet-logger';
+// import logger from 'jet-logger';
 
 import EnvVars from './common/constants/env';
 import server from './server';
@@ -16,9 +16,9 @@ const SERVER_START_MESSAGE =
 
 // Start the server
 server.listen(EnvVars.Port, (err: Error | undefined) => {
-  if (!!err) {
-    logger.err(err.message);
-  } else {
-    logger.info(SERVER_START_MESSAGE);
-  }
+  // if (!!err) {
+  //   logger.err(err.message);
+  // } else {
+  //   logger.info(SERVER_START_MESSAGE);
+  // }
 });

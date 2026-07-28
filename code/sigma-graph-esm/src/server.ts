@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express';
 // import helmet from 'helmet';
-import logger from 'jet-logger';
+// import logger from 'jet-logger';
 // import morgan from 'morgan';
 import path from 'path';
 
@@ -37,9 +37,9 @@ app.use(Paths._, BaseRouter);
 
 // Add error handler
 app.use((err: Error, _: Request, res: Response, next: NextFunction) => {
-  if (EnvVars.NodeEnv !== NodeEnvs.TEST.valueOf()) {
-    logger.err(err, true);
-  }
+  // if (EnvVars.NodeEnv !== NodeEnvs.TEST.valueOf()) {
+  //   logger.err(err, true);
+  // }
   if (err instanceof RouteError) {
     res.status(err.status).json({ error: err.message });
   }
