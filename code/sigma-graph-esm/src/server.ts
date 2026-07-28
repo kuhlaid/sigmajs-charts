@@ -18,7 +18,7 @@ const app = express();
 
 // **** Middleware **** //
 
-// Basic middleware
+// Basic middleware (for reading JSON data posted to a route)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

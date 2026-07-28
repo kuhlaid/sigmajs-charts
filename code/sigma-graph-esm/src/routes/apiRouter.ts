@@ -26,6 +26,7 @@ apiRouter.use(Paths.Users._, userRouter);
 const sigmaChartRouter = Router();
 
 sigmaChartRouter.get(Paths.SigmaChart.CreateTest1, SigmaChartRoutes.createTest1);
+sigmaChartRouter.post(Paths.SigmaChart.CreatePost, SigmaChartRoutes.createTestPost);
 
 apiRouter.use(Paths.SigmaChart._, sigmaChartRouter);
 

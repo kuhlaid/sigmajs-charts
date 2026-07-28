@@ -18,6 +18,7 @@ const Paths = {
   SigmaChart: {
     _: '/sigmacharts',
     CreateTest1: '/createTest1',
+    CreatePost: '/createTestPost',
   },
 } as const;
 
