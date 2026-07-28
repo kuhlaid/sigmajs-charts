@@ -30,6 +30,7 @@
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "graphology": "^0.26.0",
+    "graphology-types": "^0.24.8",
     "helmet": "^8.3.0",
     "jet-env": "^1.1.6",
     "jet-logger": "^2.2.3",
@@ -69,8 +70,7 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0",
-    "vitest": "^4.1.10"
+    "typescript-eslint": "^8.65.0"
   },
   "license": "MIT"
 }

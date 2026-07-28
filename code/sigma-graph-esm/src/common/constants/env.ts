@@ -7,7 +7,7 @@ import tspo from 'tspo';
 
 // NOTE: These need to match the names of your ".env" files
 export const NodeEnvs = {
-  DEV: 'development',
+  DEV: 'dev',
   TEST: 'test',
   PRODUCTION: 'production',
 } as const;
