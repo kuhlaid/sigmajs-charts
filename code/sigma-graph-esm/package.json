@@ -39,6 +39,7 @@
     "jsonfile": "^6.2.1",
     "module-alias": "^2.3.4",
     "morgan": "^1.11.0",
+    "shx": "^0.4.0",
     "sigma": "^3.0.3",
     "tspo": "^1.0.7"
   },
@@ -66,7 +67,6 @@
     "jiti": "^2.7.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.9.6",
-    "shx": "^0.4.0",
     "supertest": "^7.2.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
