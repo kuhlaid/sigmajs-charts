@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.3] - 2026-07-28
 
 - [ ] testing posting data to an endpoint
+- [x] POST requests to the `app.github.dev` domain are likely blocked so requests will need to be tested on the build URL (e.g. vercel.com)
 
 ## [0.0.2] - 2026-07-24
 
