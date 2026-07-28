@@ -1,7 +1,7 @@
-import { getRandomInt } from './../common/utils/number-utils';
-import { IUser } from './../models/User.model';
+import { getRandomInt } from './../common/utils/number-utils.ts';
+import type { IUser } from './../models/User.model.ts';
 
-import orm from './MockOrm';
+import orm from './MockOrm.ts';
 
 /******************************************************************************
                                 Functions

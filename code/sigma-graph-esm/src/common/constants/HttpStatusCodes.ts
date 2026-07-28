@@ -3,7 +3,7 @@
                                 Constants
 ******************************************************************************/
 
-import { ValueOf } from "../types/structure-utils";
+import type { ValueOf } from "../types/structure-utils.ts";
 
 /**
  * Hypertext Transfer Protocol (HTTP) response status codes.

@@ -1,4 +1,4 @@
-import { IUser } from './models/User.model';
+import type { IUser } from '../../src/models/User.model.ts';
 
 /******************************************************************************
                                 Types

@@ -2,6 +2,7 @@
   "name": "sigma-graph-esm",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "shx rm -rf dist && tsx tsconfig.prod.json && yarn run build:copy-static",
     "build:copy-static": "shx mkdir -p dist/public dist/views && shx cp -r src/public/* dist/public && shx cp -r src/views/* dist/views",

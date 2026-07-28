@@ -1,13 +1,13 @@
 import jsonfile from 'jsonfile';
 import tspo from 'tspo';
 
-import EnvVars, { NodeEnvs } from './../common/constants/env';
-import { IUser } from './../models/User.model';
+import EnvVars, { NodeEnvs } from './../common/constants/env.ts';
+import type { IUser } from './../models/User.model.ts';
 
 /******************************************************************************
                                 Constants
 ******************************************************************************/
-
+const __dirname = process.cwd();
 const DATABASE_FILE_PATH =
   __dirname +
   '/common' +

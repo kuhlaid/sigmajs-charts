@@ -1,7 +1,7 @@
-import HttpStatusCodes from './../common/constants/HttpStatusCodes';
+import HttpStatusCodes from './../common/constants/HttpStatusCodes.ts';
 import Graph from "graphology";
 // import Sigma from "sigma";
-import { Req, Res } from './common/express-types';
+import type { Req, Res } from './common/express-types.ts';
 // import path from 'path';
 // import { fileURLToPath } from 'url';
 /******************************************************************************

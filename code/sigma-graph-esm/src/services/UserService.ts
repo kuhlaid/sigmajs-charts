@@ -1,7 +1,7 @@
-import HttpStatusCodes from './../common/constants/HttpStatusCodes';
-import { RouteError } from './../common/utils/route-errors';
-import { IUser } from './../models/User.model';
-import UserRepo from './../repos/UserRepo';
+import HttpStatusCodes from './../common/constants/HttpStatusCodes.ts';
+import { RouteError } from './../common/utils/route-errors.ts';
+import type { IUser } from './../models/User.model.ts';
+import UserRepo from './../repos/UserRepo.ts';
 
 /******************************************************************************
                                 Constants

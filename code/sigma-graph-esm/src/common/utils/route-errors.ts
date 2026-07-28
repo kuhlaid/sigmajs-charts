@@ -1,6 +1,6 @@
-import { ParseError } from 'jet-validators/utils';
+import type { ParseError } from 'jet-validators/utils';
 
-import HttpStatusCodes from '../../common/constants/HttpStatusCodes';
+import HttpStatusCodes from '../../common/constants/HttpStatusCodes.ts';
 
 /******************************************************************************
                                  Classes

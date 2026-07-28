@@ -1,12 +1,12 @@
 import { isNumber } from 'jet-validators';
 import { transform } from 'jet-validators/utils';
 
-import HttpStatusCodes from './../common/constants/HttpStatusCodes';
-import User from './../models/User.model';
-import UserService from './../services/UserService';
+import HttpStatusCodes from './../common/constants/HttpStatusCodes.ts';
+import User from './../models/User.model.ts';
+import UserService from './../services/UserService.ts';
 
-import { Req, Res } from './common/express-types';
-import parseReq from './common/parseReq';
+import type { Req, Res } from './common/express-types.ts';
+import parseReq from './common/parseReq.ts';
 
 /******************************************************************************
                                 Constants

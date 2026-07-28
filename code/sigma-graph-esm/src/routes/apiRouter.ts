@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import Paths from './../common/constants/Paths';
-import SigmaChartRoutes from './SigmaChartRoutes';
-import UserRoutes from './UserRoutes';
+import Paths from './../common/constants/Paths.ts';
+import SigmaChartRoutes from './SigmaChartRoutes.ts';
+import UserRoutes from './UserRoutes.ts';
 
 /******************************************************************************
                                 Setup

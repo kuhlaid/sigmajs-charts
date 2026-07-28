@@ -1,14 +1,12 @@
-import express, { NextFunction, Request, Response } from 'express';
+import express, { type NextFunction, type Request, type Response } from 'express';
 // import helmet from 'helmet';
 // import logger from 'jet-logger';
 // import morgan from 'morgan';
 import path from 'path';
 
-import Paths from './common/constants/Paths';
-import { RouteError } from './common/utils/route-errors';
-import BaseRouter from './routes/apiRouter';
-
-import EnvVars, { NodeEnvs } from './common/constants/env';
+import Paths from './common/constants/Paths.ts';
+import { RouteError } from './common/utils/route-errors.ts';
+import BaseRouter from './routes/apiRouter.ts';
 
 /******************************************************************************
                                 Setup
@@ -47,7 +45,7 @@ app.use((err: Error, _: Request, res: Response, next: NextFunction) => {
 });
 
 // **** FrontEnd Content **** //
-const __dirname = import.meta.dirname;
+const __dirname = process.cwd();
 // Set views directory (html)
 const viewsDir = path.join(__dirname, 'views');
 app.set('views', viewsDir);
