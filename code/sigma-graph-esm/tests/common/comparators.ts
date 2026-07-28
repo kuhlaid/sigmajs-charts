@@ -1,4 +1,4 @@
-import { IUser } from '@src/models/User.model';
+import { IUser } from './models/User.model';
 
 /******************************************************************************
                                 Types

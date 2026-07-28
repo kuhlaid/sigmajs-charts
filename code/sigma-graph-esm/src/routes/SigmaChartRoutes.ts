@@ -1,9 +1,9 @@
-import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
+import HttpStatusCodes from './../common/constants/HttpStatusCodes';
 import Graph from "graphology";
 // import Sigma from "sigma";
 import { Req, Res } from './common/express-types';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 /******************************************************************************
                                 Functions
 ******************************************************************************/
@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
  *
  * @route GET /api/sigmacharts/createTest1
  */
-async function createTest1(_: Req, res: Res) {
+function createTest1(_: Req, res: Res) {
   const graphData = {
         nodes: [
             { id: "n1", label: "Node 1", x: 0, y: 0, size: 10, color: "#ff5733" },
@@ -49,7 +49,7 @@ async function submitPost(req: Req, res: Res) {
     return res.status(HttpStatusCodes.INTERNAL_SERVER_ERROR).send('Missing POST_TEST_URI1');
   }
 
-  fetch(postUri, {
+  await fetch(postUri, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json' // Tells the server to expect JSON
@@ -71,8 +71,8 @@ async function submitPost(req: Req, res: Res) {
  *
  * @route POST /api/sigmacharts/createTestPost
  */
-async function createTestPost(req: Req, res: Res) {
-  var graphData = {
+function createTestPost(req: Req, res: Res) {
+  const graphData = {
         name: 'Here again',
         email: 'home@example.com'
     }

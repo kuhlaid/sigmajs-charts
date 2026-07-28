@@ -1,13 +1,13 @@
-import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
-import { JetPaths as Paths } from '@src/common/constants/Paths';
-import { ValidationError } from '@src/common/utils/route-errors';
-import User, { IUser } from '@src/models/User.model';
-import UserRepo from '@src/repos/UserRepo';
+import HttpStatusCodes from './../src/common/constants/HttpStatusCodes';
+import { JetPaths as Paths } from './../src/common/constants/Paths';
+import { ValidationError } from './../src/common/utils/route-errors';
+import User, { IUser } from './../src/models/User.model';
+import UserRepo from './../src/repos/UserRepo';
 
 import { agent } from './support/agent';
 import { TestRes } from './common/supertest-types';
 import { parseValidationError } from './common/error-utils';
-import UserService from '@src/services/UserService';
+import UserService from './services/UserService';
 import { compareUserArrays } from './common/comparators';
 
 /******************************************************************************

@@ -1,5 +1,5 @@
-import { getRandomInt } from '@src/common/utils/number-utils';
-import { IUser } from '@src/models/User.model';
+import { getRandomInt } from './../common/utils/number-utils';
+import { IUser } from './../models/User.model';
 
 import orm from './MockOrm';
 

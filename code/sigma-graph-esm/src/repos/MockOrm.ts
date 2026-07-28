@@ -1,8 +1,8 @@
 import jsonfile from 'jsonfile';
 import tspo from 'tspo';
 
-import EnvVars, { NodeEnvs } from '@src/common/constants/env';
-import { IUser } from '@src/models/User.model';
+import EnvVars, { NodeEnvs } from './../common/constants/env';
+import { IUser } from './../models/User.model';
 
 /******************************************************************************
                                 Constants

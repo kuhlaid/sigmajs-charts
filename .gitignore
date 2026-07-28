@@ -4,3 +4,5 @@ code/sigma-graph-es/node_modules
 code/yarn.lock
 requests.rest
 code/sigma-graph-esm/config/.env.development
+requests2.rest
+code/sigma-graph-esm/config/.env.dev

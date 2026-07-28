@@ -1,9 +1,9 @@
 import { isNumber } from 'jet-validators';
 import { transform } from 'jet-validators/utils';
 
-import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
-import User from '@src/models/User.model';
-import UserService from '@src/services/UserService';
+import HttpStatusCodes from './../common/constants/HttpStatusCodes';
+import User from './../models/User.model';
+import UserService from './../services/UserService';
 
 import { Req, Res } from './common/express-types';
 import parseReq from './common/parseReq';

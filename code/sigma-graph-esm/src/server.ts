@@ -1,12 +1,12 @@
 import express, { NextFunction, Request, Response } from 'express';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 import logger from 'jet-logger';
-import morgan from 'morgan';
+// import morgan from 'morgan';
 import path from 'path';
 
-import Paths from '@src/common/constants/Paths';
-import { RouteError } from '@src/common/utils/route-errors';
-import BaseRouter from '@src/routes/apiRouter';
+import Paths from './common/constants/Paths';
+import { RouteError } from './common/utils/route-errors';
+import BaseRouter from './routes/apiRouter';
 
 import EnvVars, { NodeEnvs } from './common/constants/env';
 

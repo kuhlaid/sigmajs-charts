@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import Paths from '@src/common/constants/Paths';
+import Paths from './../common/constants/Paths';
 import SigmaChartRoutes from './SigmaChartRoutes';
 import UserRoutes from './UserRoutes';
 
