@@ -3,7 +3,6 @@
  * This file is used in conjunction with apiRouter.ts, which maps the routes to functions.
  */
 
-import SigmaChartRoutes from '@src/routes/SigmaChartRoutes';
 import jetPaths from 'jet-paths';
 
 const Paths = {
@@ -18,6 +17,7 @@ const Paths = {
   SigmaChart: {
     _: '/sigmacharts',
     CreateTest1: '/createTest1',
+    SubmitPost: '/submitPost',
     CreatePost: '/createTestPost',
   },
 } as const;
