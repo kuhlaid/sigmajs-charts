@@ -42,7 +42,8 @@
     "shx": "^0.4.0",
     "sigma": "^3.0.3",
     "tsc": "^2.0.4",
-    "tspo": "^1.0.7"
+    "tspo": "^1.0.7",
+    "vitest": "^4.1.10"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
