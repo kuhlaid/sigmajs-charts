@@ -43,6 +43,7 @@
     "sigma": "^3.0.3",
     "tsc": "^2.0.4",
     "tspo": "^1.0.7",
+    "vite": "^8.1.5",
     "vitest": "^4.1.10"
   },
   "devDependencies": {
