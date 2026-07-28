@@ -28,7 +28,7 @@ Here we try to use the `express-generator-typescript` package to create a TypeSc
 - run `yarn add express-generator-typescript`
 - run `yarn dlx express-generator-typescript sigma-graph-esm`
 - run `cd sigma-graph-esm`
-- run `yarn add sigma graphology ejs graphology-types shx` (you should be in the `sigma-graph-esm` app directory before running this command so the packages do not get committed to the code repository); this will also update yarn; the `ejs` package is used to serve .ejs template files
+- run `yarn add sigma graphology ejs graphology-types shx tsc` (you should be in the `sigma-graph-esm` app directory before running this command so the packages do not get committed to the code repository); this will also update yarn; the `ejs` package is used to serve .ejs template files
 - run `yarn add -D @types/express` since Express is written in javascript and does not have types assigned (this uses community defined types to help prevent typescript errors with the Express module)
 - run `yarn dev:basic` (make sure you are within the `sigma-graph-esm` directory when running this script)
 
