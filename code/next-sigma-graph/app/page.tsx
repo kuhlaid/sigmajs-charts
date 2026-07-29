@@ -10,7 +10,7 @@ export default function Home() {
     setStatus('Sending...');
     
     try {
-      const response = await fetch('/api/sigma-chart', {
+      const response = await fetch('/api/sigma-chart-test', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,14 +18,14 @@ export default function Home() {
         body: JSON.stringify({
             "token": "xxx",
             "user": "xxx",
-            "message": "RAM device alert. Check alarm logs at https://py-remote-mon-dept-tarcinfo.apps.cloudapps.unc.edu."
+            "message": "Check alarm logs."
         }),
       });
 
       const result = await response.json(); // here we need to know what the format of the JSON should look like
       
       if (response.ok) {
-        setStatus(`Success: Response.status=${response.status} and result.status=${result.res.token}`);
+        setStatus(`Success: Response.status=${response.status} and result.status=${result.token}`);
       } else {
         setStatus(`Error: ${result.error}`);
       }

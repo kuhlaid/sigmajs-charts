@@ -1,5 +1,5 @@
 /**
- * The route will be a 'real' API endpoint for generating sigma charts.
+ * This route is used to get general GET and POST requests
  */
 import { NextResponse } from "next/server";
 
