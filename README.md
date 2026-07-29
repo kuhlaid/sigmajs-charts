@@ -1,6 +1,15 @@
 # sigmajs-charts
 
 The goal of this code is to provide NodeJs graph charting using SigmaJs charts from external data. The initial thought was to use NextJs but we do not need the full stack capabilities of NextJs so we switched to Vite. Changing yet again to ExpressJs.
+Finally reverting back to NextJs because ExressJs has too many modules that are poorly developed.
+
+## NextJs setup
+
+- run `cd code`  (this moves the app under the `code` subdirectory to we can test various frameworks)
+- run `yarn create next-app --api next-sigma-graph` (creates a NextJs app with API routes configured and saves the app under a `next-sigma-graph` directory); see https://nextjs.org/docs/app/guides/backend-for-frontend
+- run `cd next-sigma-graph`
+- run `yarn add react react-dom sigma graphology` (for some reason these are missing from the boilerplate install)
+- run `yarn dev` (to start dev server)
 
 ## ExpressJs setup
 
