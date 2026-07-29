@@ -7,12 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.4] - 2026-07-29
 
-- [ ] trying NextJs again because the Express framework does not include everything needed and I am using too many modules that are not well developed
+- [x] trying NextJs and that seems to work well (the Express framework did not include everything needed and I was using too many modules that are not well developed and the build was not working on Vercel)
+- [x] POST requests to the `app.github.dev` domain seem to be blocked but the same post requests (using request.rest POST command) work against the production build URL (e.g. https://sigmajs-charts.vercel.app/api/sigma-chart)
+- [x] the default NextJs install did not include a layout.tsx document which is needed to add an html wrapper
 
 ## [0.0.3] - 2026-07-28
 
-- [ ] testing posting data to an endpoint
-- [x] POST requests to the `app.github.dev` domain are likely blocked so requests will need to be tested on the build URL (e.g. vercel.com)
 - [x] Make sure to perform a `yarn build` before pushing the code to ensure the build succeeds (although some errors do not appear locally)
 - [x] needed to make a few updates to the configurations to help prevent errors and warnings
 - [x] setting `"type": "module"` in the package.json file to force the build to use ESM instead of commonJs

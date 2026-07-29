@@ -10,6 +10,7 @@ Finally reverting back to NextJs because ExressJs has too many modules that are 
 - run `cd next-sigma-graph`
 - run `yarn add react react-dom sigma graphology` (for some reason these are missing from the boilerplate install)
 - run `yarn dev` (to start dev server)
+- NOTE: for production vercel build DO NOT OVERRIDE the default build commands
 
 ## ExpressJs setup
 
